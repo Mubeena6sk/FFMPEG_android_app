@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/imageButtonAttitude"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="60dp"
+            android:background="@drawable/attitude"
+            android:onClick="onClick"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="@+id/imageButtonComedy"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/imageButtonComedy"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/comedy"
+            android:onClick="onClick"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/imageButtonDevotion"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/devotion"
+            android:onClick="onClick"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="@+id/imageButtonFamily"
+            app:layout_constraintEnd_toEndOf="@+id/imageButtonAttitude"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonAttitude" />
+
+        <ImageButton
+            android:id="@+id/imageButtonFamily"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/family"
+            android:onClick="onClick"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/imageButtonComedy"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonComedy" />
+
+        <ImageButton
+            android:id="@+id/imageButtonFestival"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/festival"
+            android:onClick="onClick"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="@+id/imageButtonDevotion"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonDevotion" />
+
+        <ImageButton
+            android:id="@+id/imageButtonInspiration"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/inspiration"
+            android:onClick="onClick"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/imageButtonFamily"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonFamily" />
+
+        <ImageButton
+            android:id="@+id/imageButtonLyrical"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/lyrical"
+            android:onClick="onClick"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="@+id/imageButtonFestival"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonFestival" />
+
+        <ImageButton
+            android:id="@+id/imageButtonMelodies"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/melody"
+            android:onClick="onClick"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/imageButtonInspiration"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonInspiration" />
+
+        <ImageButton
+            android:id="@+id/imageButtonNewReleases"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/newreleases"
+            android:onClick="onClick"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="@+id/imageButtonLyrical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonLyrical" />
+
+        <ImageButton
+            android:id="@+id/imageButtonOld1990s"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/old1990s"
+            android:onClick="onClick"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/imageButtonMelodies"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonMelodies" />
+
+        <ImageButton
+            android:id="@+id/imageButtonPatriotic"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/patriotic"
+            android:onClick="onClick"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="@+id/imageButtonNewReleases"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonNewReleases" />
+
+        <ImageButton
+            android:id="@+id/imageButtonPopular"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/popular"
+            android:onClick="onClick"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/imageButtonOld1990s"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonOld1990s" />
+
+        <ImageButton
+            android:id="@+id/imageButtonSad"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/sad"
+            android:onClick="onClick"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="@+id/imageButtonPatriotic"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonPatriotic" />
+
+        <ImageButton
+            android:id="@+id/imageButtonSports"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/sports"
+            android:onClick="onClick"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/imageButtonPopular"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonPopular" />
+
+        <TextView
+            android:id="@+id/textViewAttitude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/amaranth_bold_italic"
+            android:text="Attitude"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="@+id/imageButtonAttitude"
+            app:layout_constraintTop_toTopOf="@+id/imageButtonAttitude" />
+
+        <TextView
+            android:id="@+id/textViewComedy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="38dp"
+            android:layout_marginLeft="38dp"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/amaranth_bold_italic"
+            android:text="Comedy"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="@+id/imageButtonComedy"
+            app:layout_constraintTop_toTopOf="@+id/imageButtonComedy" />
+
+        <TextView
+            android:id="@+id/textViewDevotion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="34dp"
+            android:layout_marginLeft="34dp"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/amaranth_bold_italic"
+            android:text="Devotion"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="@+id/imageButtonDevotion"
+            app:layout_constraintTop_toTopOf="@+id/imageButtonDevotion" />
+
+        <TextView
+            android:id="@+id/textViewFamily"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/amaranth_bold_italic"
+            android:text="Family"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="@+id/imageButtonFamily"
+            app:layout_constraintTop_toTopOf="@+id/imageButtonFamily" />
+
+        <TextView
+            android:id="@+id/textViewFestival"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="38dp"
+            android:layout_marginLeft="38dp"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/amaranth_bold_italic"
+            android:text="Festival"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="@+id/imageButtonFestival"
+            app:layout_constraintTop_toTopOf="@+id/imageButtonFestival" />
+
+        <TextView
+            android:id="@+id/textViewInspiration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/amaranth_bold_italic"
+            android:text="Inspiration"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="@+id/imageButtonInspiration"
+            app:layout_constraintTop_toTopOf="@+id/imageButtonInspiration" />
+
+        <TextView
+            android:id="@+id/textViewLyrical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/amaranth_bold_italic"
+            android:text="Lyrical Songs"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="@+id/imageButtonLyrical"
+            app:layout_constraintTop_toTopOf="@+id/imageButtonLyrical" />
+
+        <TextView
+            android:id="@+id/textViewMelodies"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/amaranth_bold_italic"
+            android:text="Melodies"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="@+id/imageButtonMelodies"
+            app:layout_constraintTop_toTopOf="@+id/imageButtonMelodies" />
+
+        <TextView
+            android:id="@+id/textViewNewReleases"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/amaranth_bold_italic"
+            android:text="New Releases"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="@+id/imageButtonNewReleases"
+            app:layout_constraintTop_toTopOf="@+id/imageButtonNewReleases" />
+
+        <TextView
+            android:id="@+id/textViewOld1990s"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/amaranth_bold_italic"
+            android:text="Old 1990s"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="@+id/imageButtonOld1990s"
+            app:layout_constraintTop_toTopOf="@+id/imageButtonOld1990s" />
+
+        <TextView
+            android:id="@+id/textViewPatriotic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/amaranth_bold_italic"
+            android:text="Patriotic"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="@+id/imageButtonPatriotic"
+            app:layout_constraintTop_toTopOf="@+id/imageButtonPatriotic" />
+
+        <TextView
+            android:id="@+id/textViewPopular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/amaranth_bold_italic"
+            android:text="Popular"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="@+id/imageButtonPopular"
+            app:layout_constraintTop_toTopOf="@+id/imageButtonPopular" />
+
+        <TextView
+            android:id="@+id/textViewSad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/amaranth_bold_italic"
+            android:text="Sad"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="@+id/imageButtonSad"
+            app:layout_constraintTop_toTopOf="@+id/imageButtonSad" />
+
+        <TextView
+            android:id="@+id/textViewSports"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/amaranth_bold_italic"
+            android:text="Sports"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="@+id/imageButtonSports"
+            app:layout_constraintTop_toTopOf="@+id/imageButtonSports" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:text="Select a category"
+            android:fontFamily="@font/avenirnext_regular"
+            android:textColor="@android:color/background_dark"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

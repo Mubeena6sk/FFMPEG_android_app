@@ -1,0 +1,2 @@
+rootProject.name='khushi_android_app_admin'
+include ':app'
