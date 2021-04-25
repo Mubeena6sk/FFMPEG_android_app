@@ -21,6 +21,11 @@ import com.amazonaws.regions.Regions
 import com.amazonaws.services.s3.AmazonS3
 import com.amazonaws.services.s3.AmazonS3Client
 import com.amazonaws.services.s3.model.CannedAccessControlList
+import com.github.hiteshsondhi88.libffmpeg.FFmpeg
+import com.github.hiteshsondhi88.libffmpeg.FFmpegLoadBinaryResponseHandler
+import com.phoenix.whatsappkhushiadmin.callbacks.callback
+import com.phoenix.whatsappkhushiadmin.tool.TextOnVideo
+import com.phoenix.whatsappkhushiadmin.utils.Utils
 import kotlinx.android.synthetic.main.activity_upload.*
 import java.io.File
 import java.io.FileOutputStream
@@ -32,12 +37,17 @@ import java.util.*
 
 class UploadActivity : AppCompatActivity() {
 
+    private var outputPath = ""
+    private var outputFileName = ""
+    private var context: Context? = null
+
     val REQUEST_TAKE_GALLERY_VIDEO = 10
     var videoUri : Uri? = null
     var videoBitmap : Bitmap? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_upload)
+        this.context = this
 
         if(intent.hasExtra("receivedVideo")){
             videoUri = intent.getParcelableExtra("receivedVideo")
@@ -81,6 +91,54 @@ class UploadActivity : AppCompatActivity() {
         }
     }
     fun upload(view: View) {
+
+        val file = File(videoUri?.path) //create path from uri
+
+        val split = file.path.split(":").toTypedArray() //split the path.
+
+        val filePath = split[1] //assign it to a string(your choice).
+
+        Log.e("tag",filePath)
+        Log.e("tag",filePath)
+        Log.e("tag",filePath)
+        Log.e("tag",filePath)
+        Log.e("tag",filePath)
+        Log.e("tag",filePath)
+        Log.e("tag",filePath)
+        Log.e("tag",filePath)
+        Log.e("tag",filePath)
+
+
+        val ff = FFmpeg.getInstance(applicationContext)
+        ff.loadBinary(object : FFmpegLoadBinaryResponseHandler {
+            override fun onFinish() {
+                Log.e("FFmpegLoad", "onFinish")
+            }
+
+            override fun onSuccess() {
+                Log.e("FFmpegLoad", "onSuccess")
+                TextOnVideo.with(context!!)
+                    .setFile(filePath)
+                    .setOutputPath(Utils.outputPath + "video")
+                    .setOutputFileName("textOnVideo_" + System.currentTimeMillis() + ".mp4")
+                    //.setFont(font) //Font .ttf of text
+                    .setText("Text Displayed on Video!!") //Text to be displayed
+                    .setColor("#50b90e") //Color of Text
+                    .setSize("34") //Size of text
+                    .addBorder(true) //This will add background with border on text
+                    .setPosition(TextOnVideo.POSITION_CENTER_BOTTOM) //Can be selected
+                   // .setCallback(this@UploadActivity)
+                    .draw()
+            }
+
+            override fun onFailure() {
+                Log.e("FFmpegLoad", "onFailure")
+            }
+
+            override fun onStart() {
+            }
+        })
+
         val progressBar = ProgressDialog(this);
         progressBar.setCancelable(true);
         progressBar.setMessage("Uploading Video...");
@@ -279,4 +337,6 @@ class UploadActivity : AppCompatActivity() {
             }
         }
     }
+
+
 }
